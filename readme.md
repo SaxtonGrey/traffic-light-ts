@@ -26,8 +26,8 @@ _You can copy and paste these checklists into your new repository and fill them 
 
 ### Standard Requirements
 
-- [ ] Setup eslint
-- [ ] Pass all linting checks
+- [x] Setup eslint
+- [x] Pass all linting checks
   - To check if linting passes, run `npm run lint`
 - [ ] Format code with prettier
 - [ ] State should not be duplicated
