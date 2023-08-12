@@ -1,3 +1,8 @@
+import { useState } from "react";
+import "./index.css";
+
+const lightColors = ["red", "green", "yellow"];
+
 export const FunctionalTrafficLight = () => {
   const [lightIndex, setLightIndex] = useState(0);
   const currentColor = lightColors[lightIndex];
@@ -10,12 +15,21 @@ export const FunctionalTrafficLight = () => {
     <div className="traffic-light-box">
       <h2>Functional Traffic Light</h2>
       <div className="traffic-light">
-        {/* Background color can be black | yellow | red | green */}
-        <div className="circle black"></div>
-        <div className="circle yellow"></div>
-        <div className="circle green"></div>
+        <div
+          className={`circle ${currentColor === "red" ? "red" : "black"}`}
+        ></div>
+        <div
+          className={`circle  ${
+            currentColor === "yellow" ? "yellow" : "black"
+          }`}
+        ></div>
+        <div
+          className={`circle  ${currentColor === "green" ? "green" : "black"}`}
+        ></div>
       </div>
-      <button className="next-state-button">Next State</button>
+      <button className="next-state-button" onClick={handleLightClick}>
+        Next State
+      </button>
     </div>
   );
 };
